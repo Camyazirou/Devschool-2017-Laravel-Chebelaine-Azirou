@@ -75,7 +75,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    LaraCroft
+                    LaraCrof
                 </div>
 
                 <div class="links">
