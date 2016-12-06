@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -19,5 +19,27 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Models\Post::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'title' => $faker->sentence(),
+        'content' => $faker->text(),
+        'user_id' => $faker->numberBetween(1, 20),
+    ];
+});
+
+$factory->define(App\Models\Event::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'title' => $faker->sentence(),
+        'description' => $faker->text(),
+        'place' => $faker->text(),
+        'price'=>$faker->numberBetween(0,100),
+        'user_id' => $faker->numberBetween(1, 20),
     ];
 });
