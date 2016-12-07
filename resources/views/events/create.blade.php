@@ -19,6 +19,17 @@
                         {!! Form::textarea('description', null,
                         ['class' => 'form-control', 'placeholder' => 'Description']) !!}
 
+                        {!! Form::label('start_time', 'Date de début de l\'évènement') !!}
+
+                        {!! Form::date('start_time', \Carbon\Carbon::now(),
+                        ['class' => 'form-control', 'placeholder' => 'Quand débute l\'évènement?']) !!}
+
+                        {!! Form::label('end_time', 'Date de fin de l\'évènement') !!}
+
+                        {!! Form::date('end_time',\Carbon\Carbon::now(),
+                        ['class' => 'form-control', 'placeholder' => 'Quand fini l\'évènement?']) !!}
+
+
                         {!! Form::label('place', 'Lieu de l\'évènement') !!}
 
                         {!! Form::textarea('place', null,

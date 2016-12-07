@@ -10,13 +10,15 @@
                     <div class="panel-body">
                         @foreach($list as $event)
                             <h2>
-                                <a href="{{ route('event.show', $event->id) }}">{{ $event->title }}</a>
+                                <a href="{{ route('event.show', $event->id) }}"><FONT SIZE="5pt"><b>{{ $event->title }}</b></FONT></a>
                             </h2>
                             <p>{{ $event->place }}</p>
                             <p>{{ $event->price }} euros </p>
                             <p>{{ $event->description }}</p>
-                            <em>Proposé par : {{ $event->user->name }} </em>
+                            <b>Proposé par : </b> {{ $event->user->name }}
+                            <hr>
                         @endforeach
+
 
                         {!! $list->links() !!}
                     </div>

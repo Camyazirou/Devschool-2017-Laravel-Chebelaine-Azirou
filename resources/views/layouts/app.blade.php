@@ -53,10 +53,12 @@
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
-                        <li><a href="{{ route('post.create') }}">Publier un article </a></li>
-                        <li><a href="{{ route('post.index') }}">Flux d'articles</a></li>
+                        <li><a href="{{ route('post.index') }}">Blog</a></li>
+                        <li><a href="{{ route('event.index') }}">Evènements</a></li>
                         <li><a href="{{ route('event.create') }}">Publier un évènement </a></li>
-                        <li><a href="{{ route('event.index') }}">Liste des évènements </a></li>
+                        <li><a href="{{ route('post.create') }}">Publier un article </a></li>
+
+                        <li><a href="{{ url('/admin') }}">Page d'administration </a></li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

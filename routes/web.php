@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/admin', function () {
+    return view('admin');
 });
 
 
@@ -24,5 +24,6 @@ Auth::routes();
 Route::resource('/post', 'PostController');
 Route::resource('/event', 'EventController');
 Route::get('/', 'HomeController@index');
-
 Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'AdminController@index');
+
