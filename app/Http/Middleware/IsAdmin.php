@@ -24,3 +24,4 @@ class IsAdmin
             ->with('success', 'Vous n\'avez pas les droits pour accéder à cette page.');
     }
 }
+

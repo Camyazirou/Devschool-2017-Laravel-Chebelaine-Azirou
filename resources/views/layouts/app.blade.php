@@ -50,6 +50,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ route('post.create') }}">Publier un article </a></li>
                     <li><a href="{{ route('post.index') }}">Flux d'articles</a></li>
+                    <li><a href="{{ route('event.create') }}">Publier un évènement </a></li>
+                    <li><a href="{{ route('event.index') }}">Liste des évènements </a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>

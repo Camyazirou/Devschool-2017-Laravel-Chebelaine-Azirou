@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::resource('/post', 'PostController');
+Route::resource('/event', 'EventController');
 Route::get('/', 'HomeController@index');
 
 Route::get('/home', 'HomeController@index');

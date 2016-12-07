@@ -5,15 +5,17 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Liste des articles</div>
+                    <div class="panel-heading">Liste des Evenements</div>
 
                     <div class="panel-body">
-                        @foreach($list as $post)
+                        @foreach($list as $event)
                             <h2>
-                                <a href="{{ route('post.show', $post->id) }}">{{ $post->title }}</a>
+                                <a href="{{ route('event.show', $event->id) }}">{{ $event->title }}</a>
                             </h2>
-                            <p>{{ $post->content }}</p>
-                            <em>Auteur : {{ $post->user->name }} </em>
+                            <p>{{ $event->place }}</p>
+                            <p>{{ $event->price }} euros </p>
+                            <p>{{ $event->description }}</p>
+                            <em>Proposé par : {{ $event->user->name }} </em>
                         @endforeach
 
                         {!! $list->links() !!}
