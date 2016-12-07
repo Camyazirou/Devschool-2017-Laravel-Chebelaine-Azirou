@@ -48,15 +48,16 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ route('post.create') }}">Publier un article </a></li>
-                    <li><a href="{{ route('post.index') }}">Flux d'articles</a></li>
-                    <li><a href="{{ route('event.create') }}">Publier un évènement </a></li>
-                    <li><a href="{{ route('event.index') }}">Liste des évènements </a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
+                        <li><a href="{{ route('post.create') }}">Publier un article </a></li>
+                        <li><a href="{{ route('post.index') }}">Flux d'articles</a></li>
+                        <li><a href="{{ route('event.create') }}">Publier un évènement </a></li>
+                        <li><a href="{{ route('event.index') }}">Liste des évènements </a></li>
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>

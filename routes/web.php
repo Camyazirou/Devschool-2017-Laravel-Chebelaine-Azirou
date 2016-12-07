@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+
 Auth::routes();
 Route::resource('/post', 'PostController');
 Route::resource('/event', 'EventController');
